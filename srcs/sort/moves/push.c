@@ -14,7 +14,7 @@
 
 void	p(t_stack *dst, t_stack *src)
 {
-	t_elem *tmp;
+	t_elem	*tmp;
 
 	if (src->count)
 	{
@@ -27,4 +27,3 @@ void	p(t_stack *dst, t_stack *src)
 			ft_putstr_fd("pb\n", 1);
 	}
 }
-

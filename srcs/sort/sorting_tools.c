@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   sorting_tools.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -48,10 +48,10 @@ t_bool	rot_direction_a(t_stack *a, int range_max)
 	return (TRUE);
 }
 
-void a_to_b(t_stack *a, t_stack *b, t_range *range)
+void	a_to_b(t_stack *a, t_stack *b, t_range *range)
 {
-	t_rotate 	rotate[2];
-	int 		select;
+	t_rotate	rotate[2];
+	int			select;
 
 	rotate[0] = &r;
 	rotate[1] = &rr;
@@ -87,11 +87,11 @@ t_bool	rot_direction_b(t_stack *b)
 	return (TRUE);
 }
 
-void b_to_a(t_stack *a, t_stack *b)
+void	b_to_a(t_stack *a, t_stack *b)
 {
-	t_rotate 	rotate[2];
-	int 		index;
-	int 		select;
+	t_rotate	rotate[2];
+	int			index;
+	int			select;
 
 	rotate[0] = &r;
 	rotate[1] = &rr;

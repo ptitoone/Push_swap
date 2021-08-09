@@ -27,3 +27,19 @@ t_bool	ft_malloc_int(int size, int **tab)
 		return (TRUE);
 	return (FALSE);
 }
+
+t_bool	ft_malloc_float(int size, int **tab)
+{
+	*tab = (int *)malloc(size * sizeof(float));
+	if (*tab)
+		return (TRUE);
+	return (FALSE);
+}
+
+t_bool	ft_malloc_double(int size, int **tab)
+{
+	*tab = (int *)malloc(size * sizeof(double));
+	if (*tab)
+		return (TRUE);
+	return (FALSE);
+}

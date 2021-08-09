@@ -16,3 +16,4 @@ t_bool	ft_free_int(int **tab)
 	*tab = NULL;
 	return (FALSE);
 }
+

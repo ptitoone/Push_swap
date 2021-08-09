@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   absolute.c                                         :+:      :+:    :+:   */
+/*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,17 +12,7 @@
 
 #include "push_swap.h"
 
-void	init_stacks(t_stack *a, t_stack *b)
-{
-	a->head = NULL;
-	a->count = 0;
-	a->stack = 'a';
-	b->head = NULL;
-	b->count = 0;
-	b->stack = 'b';
-}
-
-void add_elem(t_stack *dst, t_elem *elem)
+void	add_elem(t_stack *dst, t_elem *elem)
 {
 	elem->prev = elem;
 	elem->next = elem;
@@ -38,7 +28,7 @@ void add_elem(t_stack *dst, t_elem *elem)
 	(dst->count)++;
 }
 
-void del_elem(t_stack *src, t_elem **elem)
+void	del_elem(t_stack *src, t_elem **elem)
 {
 	if (src->count)
 	{
@@ -53,4 +43,18 @@ void del_elem(t_stack *src, t_elem **elem)
 			src->head = NULL;
 		(src->count)--;
 	}
+}
+
+void	exit_push_swap(t_stack *stack, t_bool error)
+{
+	t_elem	*free_elem;
+
+	while (stack->count)
+	{
+		del_elem(stack, &free_elem);
+		free(free_elem);
+	}
+	if (error)
+		ft_putstr_fd("Error\n", 2);
+	exit(EXIT_SUCCESS);
 }

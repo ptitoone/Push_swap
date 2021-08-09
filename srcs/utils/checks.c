@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_order.c                                      :+:      :+:    :+:   */
+/*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,26 @@
 
 #include "push_swap.h"
 
-void	is_sorted(t_stack *stack)
+t_bool	check_duplicates(t_stack *stack, char **split, long int value)
+{
+	int		i;
+	t_elem	*current;
+
+	i = -1;
+	current = stack->head;
+	while (++i < stack->count)
+	{
+		if (current->value == value)
+		{
+			free_split(split);
+			exit_push_swap(stack, TRUE);
+		}
+		current = current->next;
+	}
+	return (TRUE);
+}
+
+void	check_if_sorted(t_stack *stack)
 {
 	t_elem	*browse;
 	t_bool	sorted;

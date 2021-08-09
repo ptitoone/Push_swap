@@ -14,12 +14,12 @@
 
 void	s(t_stack *stack, t_bool print)
 {
-	int 	value;
-	int 	index;
+	int	value;
+	int	index;
 
 	if (stack->count > 1
 		&& ((stack->stack == 'a'
-			&& stack->head->index > stack->head->next->index)
+				&& stack->head->index > stack->head->next->index)
 			|| (stack->head->index < stack->head->next->index
 				&& stack->stack == 'b')))
 	{

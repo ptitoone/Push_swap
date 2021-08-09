@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static void set_range(t_stack *a, t_range *range)
+static void	set_range(t_stack *a, t_range *range)
 {
 	range->bound = a->count;
 	range->range_min = 1;
@@ -26,7 +26,7 @@ static void set_range(t_stack *a, t_range *range)
 	range->piv = range->offset / 2;
 }
 
-int search_smallest_index(t_stack *s, int index_min)
+static int	search_smallest_index(t_stack *s, int index_min)
 {
 	t_elem	*browse;
 	int		i;
@@ -57,7 +57,6 @@ void	sort(t_stack *a, t_stack *b)
 		(range.piv) += (range.offset);
 	}
 	sort_a(a);
-	//print_stacks(a, b);
 	while (b->count)
 		b_to_a(a, b);
 }

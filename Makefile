@@ -13,7 +13,10 @@
 NAME		=	push_swap
 NAME_BONUS	=	checker
 
-SRCS		:=	$(shell echo srcs/*.c srcs/utils/*.c srcs/sort/*.c srcs/sort/moves/*.c)
+SRCS		:=	$(shell echo	srcs/*.c \
+								srcs/utils/*.c \
+								srcs/sort/*.c \
+								srcs/sort/moves/*.c)
 OBJS		=	$(SRCS:.c=.o)
 
 LIBFT		=	libft.a

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   indexate_stack.c                                   :+:      :+:    :+:   */
+/*   indexate_stacks.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/22 14:53:42 by akotzky           #+#    #+#             */
-/*   Updated: 2021/07/22 14:58:41 by akotzky          ###   ########.fr       */
+/*   Created: 2021/06/15 13:56:30 by akotzky           #+#    #+#             */
+/*   Updated: 2021/08/04 17:23:34 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 static void	init_tab(t_stack *stack, int *tab)
 {
-	t_elem *browse;
-	int	i;
+	t_elem	*browse;
+	int		i;
 
 	browse = stack->head;
 	i = -1;
-
 	while (++i < stack->count)
 	{
 		tab[i] = browse->value;
@@ -27,7 +26,7 @@ static void	init_tab(t_stack *stack, int *tab)
 	}
 }
 
-void add_index(t_stack *stack, int *tab)
+static void	add_index(t_stack *stack, int *tab)
 {
 	int		i;
 	t_elem	*browse;
@@ -44,7 +43,7 @@ void add_index(t_stack *stack, int *tab)
 
 void	indexate_stack(t_stack *stack)
 {
-	int *tab;
+	int	*tab;
 
 	if (!(ft_malloc_int(stack->count, &tab)))
 		exit_push_swap(stack, TRUE);
