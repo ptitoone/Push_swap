@@ -16,7 +16,7 @@ int	main(int ac, char **av)
 {
 	t_stack	a;
 	t_stack	b;
-	char 	*joined;
+	char	*joined;
 	char	**split;
 
 	joined = NULL;
@@ -27,7 +27,7 @@ int	main(int ac, char **av)
 	if (!joined)
 		return (0);
 	init_stacks(&a, &b);
-	split = ft_split(joined,' ');
+	split = ft_split(joined, ' ');
 	free(joined);
 	create_stack(&a, split);
 	free_split(split);

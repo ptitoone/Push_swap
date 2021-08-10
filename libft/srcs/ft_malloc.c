@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-t_bool	ft_malloc_char(int size, char **dst)
+t_bool	ft_malloc_char(int size, char **tab)
 {
-	*dst = (char *)malloc(size * sizeof(char));
-	if (*dst)
+	*tab = (char *)malloc(size * sizeof(char));
+	if (*tab)
 		return (TRUE);
 	return (FALSE);
 }

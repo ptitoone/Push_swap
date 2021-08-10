@@ -39,12 +39,11 @@ static void	ft_init_join_index(int *i, int *j)
 	*j = 0;
 }
 
-
 void	ft_join_list(char **av, int count, char **str, char sep)
 {
 	int		char_count;
-	int 	i;
-	int 	j;
+	int		i;
+	int		j;
 	int		k;
 
 	char_count = 1;

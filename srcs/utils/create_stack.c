@@ -43,9 +43,9 @@ static void	new_elem(t_stack *a, char **split, long int value)
 	add_elem(a, elem);
 }
 
-void create_stack(t_stack *a, char **split)
+void	create_stack(t_stack *a, char **split)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (split[i])

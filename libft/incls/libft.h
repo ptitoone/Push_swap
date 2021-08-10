@@ -85,11 +85,12 @@ void		ft_lstdelone(t_list *lst, void (*del)(void*));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
-int			*malloc_int_pointer(int value);
 void		free_split(char **split);
 
-t_bool		ft_malloc_char(int size, char **dst);
+t_bool		ft_malloc_char(int size, char **tab);
 t_bool		ft_malloc_int(int size, int **tab);
+t_bool		ft_malloc_float(int size, int **tab);
+t_bool		ft_malloc_double(int size, int **tab);
 
 t_bool 		ft_free_char(char **str);
 t_bool		ft_free_int(int **tab);

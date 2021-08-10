@@ -11,17 +11,13 @@
 # **************************************************************************** #
 
 NAME		=	push_swap
-NAME_BONUS	=	checker
-
 SRCS		:=	$(shell echo	srcs/*.c \
 								srcs/utils/*.c \
 								srcs/sort/*.c \
 								srcs/sort/moves/*.c)
 OBJS		=	$(SRCS:.c=.o)
-
 LIBFT		=	libft.a
 INCLS		=	-Iincls
-
 CLFAGS		=	-Wall -Wextra -Werror
 CC			=	gcc
 
@@ -36,12 +32,13 @@ $(LIBFT) :
 	@cp libft/incls/ft_printf.h incls/ft_printf.h
 	@cp libft/incls/get_next_line.h incls/get_next_line.h
 
-$(NAME) : echobjs $(OBJS)
+$(NAME) : $(OBJS)
 	$(info - Linking push_swap binary...)
 	@$(CC) $(OBJS) -L . -lft -o $(NAME)
 
 %.o : %.c
-	@$(CC) -g $(INCLS) -c $< -o $@
+	$(info - Assembling $< ...)
+	@$(CC) $(INCLS) -c $< -o $@
 
 clean : 
 	$(info - Cleaning push_swap object files...)
@@ -55,6 +52,3 @@ fclean : clean
 
 re : fclean all
 	$(info - Recompiling push_swap project...)
-
-echobjs :
-	$(info - Assembling push_swap object files...)
