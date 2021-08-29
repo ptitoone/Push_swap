@@ -6,13 +6,13 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 08:51:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/03/02 08:55:19 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/08/29 16:47:59 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incls/ft_printf.h"
 
-int	ft_int_len(long int n)
+int	ft_int_len(long n)
 {
 	int	i;
 

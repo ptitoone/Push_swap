@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   indexate_stacks.h                                  :+:      :+:    :+:   */
+/*   indexate_stack.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/15 13:56:30 by akotzky           #+#    #+#             */
-/*   Updated: 2021/08/04 17:23:34 by akotzky          ###   ########.fr       */
+/*   Created: 2021/08/29 16:43:13 by akotzky           #+#    #+#             */
+/*   Updated: 2021/08/29 16:43:26 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ void	indexate_stack(t_stack *stack)
 	init_tab(stack, tab);
 	quicksort(tab, 0, stack->count - 1);
 	add_index(stack, tab);
-	ft_free_int(&tab);
+	ft_free_int_tab(&tab);
 }

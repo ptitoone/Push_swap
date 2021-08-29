@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/23 20:55:09 by akotzky           #+#    #+#             */
-/*   Updated: 2021/06/24 19:03:15 by akotzky          ###   ########.fr       */
+/*   Created: 2021/08/29 16:42:52 by akotzky           #+#    #+#             */
+/*   Updated: 2021/08/29 16:43:26 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_bool	check_duplicates(t_stack *stack, char **split, long int value)
+t_bool	check_duplicates(t_stack *stack, char **split, long value)
 {
 	int		i;
 	t_elem	*current;

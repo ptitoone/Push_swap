@@ -23,11 +23,11 @@
 typedef struct s_list	t_list;
 struct				s_list
 {
-	void		*content;
+	void			*content;
 	struct s_list	*next;
 };
 
-typedef enum	e_bool
+typedef enum e_bool
 {
 	FALSE,
 	TRUE
@@ -92,7 +92,7 @@ t_bool		ft_malloc_int(int size, int **tab);
 t_bool		ft_malloc_float(int size, int **tab);
 t_bool		ft_malloc_double(int size, int **tab);
 
-t_bool 		ft_free_char(char **str);
-t_bool		ft_free_int(int **tab);
+t_bool		ft_free_str(char **str);
+t_bool		ft_free_int_tab(int **tab);
 
 #endif

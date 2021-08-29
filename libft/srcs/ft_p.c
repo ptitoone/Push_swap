@@ -6,18 +6,18 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 08:52:27 by akotzky           #+#    #+#             */
-/*   Updated: 2021/03/02 08:55:19 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/08/29 16:59:52 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incls/ft_printf.h"
 
-static void	ft_itoh(unsigned long int n, char *s)
+static void	ft_itoh(unsigned long n, char *s)
 {
-	char				*base;
-	unsigned long int	mod;
-	unsigned long int	div;
-	int					i;
+	char			*base;
+	unsigned long	mod;
+	unsigned long	div;
+	int				i;
 
 	base = ft_strdup("0123456789abcdef");
 	i = 0;
@@ -51,7 +51,7 @@ int	ft_p(t_conv *c, va_list *alist)
 	int			len;
 
 	ft_memset((void *)d.hx, 0, 17);
-	d.nb = va_arg(*alist, unsigned long int);
+	d.nb = va_arg(*alist, unsigned long);
 	ft_itoh(d.nb, d.hx);
 	len = ft_strlen(d.hx);
 	d.width = ft_has_width(c->conv);

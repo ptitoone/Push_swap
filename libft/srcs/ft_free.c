@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-t_bool	ft_free_char(char **str)
+t_bool	ft_free_str(char **str)
 {
 	if (*str)
 		free(*str);
@@ -20,7 +20,7 @@ t_bool	ft_free_char(char **str)
 	return (FALSE);
 }
 
-t_bool	ft_free_int(int **tab)
+t_bool	ft_free_int_tab(int **tab)
 {
 	if (*tab)
 		free(*tab);

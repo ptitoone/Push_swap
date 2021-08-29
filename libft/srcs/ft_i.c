@@ -6,13 +6,13 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 10:07:58 by akotzky           #+#    #+#             */
-/*   Updated: 2021/03/02 08:55:19 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/08/29 16:54:47 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incls/ft_printf.h"
 
-static void	ft_is_neg(long long int *n, t_conv *c)
+static void	ft_is_neg(long long *n, t_conv *c)
 {
 	ft_putchar_pf('-', 1, c);
 	*n = -(*n);

@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 09:05:43 by akotzky           #+#    #+#             */
-/*   Updated: 2021/06/10 20:56:47 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/08/29 17:03:25 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ typedef struct s_c_data {
 	char		hx[17];
 	char		*s;
 	void		*p;
-	long int	nb;
+	long		nb;
 	int			width;
-	long int	preci;
-	long int	intlen;
+	long		preci;
+	long		intlen;
 }				t_c_data;
 
 void			*ft_memset(void *str, int c, size_t n);
@@ -53,7 +53,7 @@ char			*ft_itoa(int n);
 int				ft_atoi(const char *str);
 
 int				ft_printf(const char *format, ...);
-int				ft_int_len(long int n);
+int				ft_int_len(long n);
 int				ft_handle_conv(t_conv *c, va_list *alist);
 int				ft_c(t_conv *c, va_list *alist);
 int				ft_s(t_conv *c, va_list *alist);
@@ -66,7 +66,7 @@ void			ft_replace_asterisk(char **conv, va_list *alist);
 int				ft_pad_zero(int len, t_conv *cv);
 int				ft_pad_space(int len, t_conv *cv);
 void			ft_putstr_len(const char *s, size_t len, t_conv *cv);
-void			ft_putnbr_pf(long int n, int fd, t_conv *cv);
+void			ft_putnbr_pf(long n, int fd, t_conv *cv);
 void			ft_putchar_pf(char c, int fd, t_conv *cv);
 int				ft_check(const char c);
 int				ft_is_spec(const char c);

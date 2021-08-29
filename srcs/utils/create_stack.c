@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/22 14:53:42 by akotzky           #+#    #+#             */
-/*   Updated: 2021/07/22 14:58:41 by akotzky          ###   ########.fr       */
+/*   Created: 2021/08/29 16:43:04 by akotzky           #+#    #+#             */
+/*   Updated: 2021/08/29 16:43:26 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	init_stacks(t_stack *a, t_stack *b)
 	b->stack = 'b';
 }
 
-static void	new_elem(t_stack *a, char **split, long int value)
+static void	new_elem(t_stack *a, char **split, long value)
 {
 	t_elem	*elem;
 

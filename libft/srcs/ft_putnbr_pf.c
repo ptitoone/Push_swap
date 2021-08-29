@@ -6,13 +6,13 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 08:53:09 by akotzky           #+#    #+#             */
-/*   Updated: 2021/03/02 08:55:19 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/08/29 16:51:35 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incls/ft_printf.h"
 
-void	ft_putnbr_pf(long int n, int fd, t_conv *c)
+void	ft_putnbr_pf(long n, int fd, t_conv *c)
 {
 	long int	nb;
 	long int	d;
