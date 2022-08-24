@@ -1,9 +1,9 @@
-# push_swap
+# Push_swap
 
 ### Sorting algorithm
 
 <p align="center">
-  <img src="https://i.imgur.com/vlselaJ.png" alt="Stacks of numbers representation" />
+  <img src="https://i.imgur.com/vlselaJ.png" alt="Stacks of numbers" />
 </p>
 
 In this project, I had to make a algoritim to sort a set of numbers using two stacks `A` and `B` with limited moves. All numbers are on stack `A` at the begining of the program. 
