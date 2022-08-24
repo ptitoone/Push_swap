@@ -1,8 +1,10 @@
 # push_swap
 
-### [C]
+### Sorting algorithm
 
-### Sorting algorithm of two stacks
+<p align="center">
+  <img src="https://i.imgur.com/vlselaJ.png" alt="Stacks of numbers representation" />
+</p>
 
 In this project, I had to make a algoritim to sort a set of numbers using two stacks `A` and `B` with limited moves. All numbers are on stack `A` at the begining of the program. 
 
@@ -49,5 +51,7 @@ You can also visualise the algorithm with `python3 pyviz.py $(ruby -e "puts (-20
 ## Gained skills
 
 Sorting algorithim knowledge.
+
+## Final Grade
 
 ![alt text](https://i.imgur.com/nJWji6W.png "Final grade 97/100")
